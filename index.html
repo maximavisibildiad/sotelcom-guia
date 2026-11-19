@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guía ejecutiva: los 7 puntos ciegos que pueden detener su empresa | Sotelcom</title>
+<meta name="description" content="Guía gratuita para gerentes: qué revisar en ciberseguridad, red, accesos, energía y edificio, con las 7 preguntas para hacerle a su equipo esta semana.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --naranja:#F15A22; --naranja-osc:#C9411A; --texto:#1F1F1F; --texto-2:#555;
+  --fondo-2:#F6F6F6; --borde:#D6D6D6; --rojo:#C62828;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{font-size:18px}
+body{font-family:Roboto,Arial,sans-serif;color:var(--texto);background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--naranja-osc)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.top{padding:18px 0;border-bottom:1px solid #eee}
+.logo{font-weight:900;font-size:1.35rem;color:var(--naranja);letter-spacing:-.5px;line-height:1}
+.logo small{display:block;font-weight:400;font-size:.65rem;color:var(--texto-2);letter-spacing:0;margin-top:2px}
+
+.hero{padding:44px 0 56px}
+.cols{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:start}
+.etq{display:inline-block;background:#FFF0E9;color:var(--naranja-osc);font-weight:700;font-size:.78rem;padding:5px 12px;border-radius:20px;margin-bottom:16px;text-transform:uppercase;letter-spacing:.5px}
+h1{font-size:2.3rem;line-height:1.15;font-weight:900;margin-bottom:18px;color:var(--texto)}
+h1 em{font-style:normal;color:var(--naranja)}
+.lead{font-size:1.1rem;color:var(--texto-2);margin-bottom:26px;max-width:34em}
+h2{font-size:1.15rem;margin-bottom:14px}
+.lista{list-style:none;margin-bottom:8px}
+.lista li{position:relative;padding-left:34px;margin-bottom:14px}
+.lista li::before{content:"";position:absolute;left:0;top:.3em;width:20px;height:20px;border-radius:50%;background:var(--naranja) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5 10.5l3 3 7-7' stroke='white' stroke-width='2.4' fill='none'/%3E%3C/svg%3E") center/14px no-repeat}
+.lista b{display:block}
+.lista span{color:var(--texto-2)}
+
+/* tarjeta del formulario */
+.tarjeta{background:#fff;border:1px solid var(--borde);border-radius:14px;padding:26px 24px;box-shadow:0 8px 28px rgba(0,0,0,.08);position:sticky;top:20px}
+.portada{display:flex;gap:14px;align-items:center;margin-bottom:18px}
+.mini{width:74px;height:96px;flex:none;border-radius:4px;background:linear-gradient(135deg,var(--naranja),var(--naranja-osc));color:#fff;font-size:.42rem;font-weight:900;padding:8px 6px;line-height:1.15;box-shadow:0 4px 10px rgba(0,0,0,.18)}
+.mini i{display:block;font-style:normal;font-weight:400;opacity:.85;margin-bottom:10px}
+.portada p{font-size:.9rem;color:var(--texto-2);line-height:1.4}
+.portada p b{display:block;color:var(--texto);font-size:1rem}
+label{display:block;font-size:.85rem;font-weight:500;margin:12px 0 5px}
+input,select{width:100%;padding:12px 14px;border:1px solid var(--borde);border-radius:8px;font-size:1rem;font-family:inherit;color:var(--texto);background:#fff}
+input:focus,select:focus{outline:2px solid var(--naranja);border-color:var(--naranja)}
+.dos{display:grid;grid-template-columns:1fr 1fr;gap:0 12px}
+.aviso{font-size:.78rem;color:var(--texto-2);margin-top:5px;display:none}
+.check{display:flex;gap:10px;align-items:flex-start;margin-top:16px;font-size:.78rem;color:var(--texto-2);line-height:1.45}
+.check input{width:18px;height:18px;flex:none;margin-top:2px}
+.check label{margin:0;font-weight:400;font-size:.78rem}
+.btn{display:block;width:100%;background:var(--naranja);color:#fff;font-weight:700;font-size:1.05rem;border:none;border-radius:8px;padding:16px;cursor:pointer;margin-top:18px;text-align:center;text-decoration:none;font-family:inherit}
+.btn:hover{background:var(--naranja-osc)}
+.seguro{font-size:.75rem;color:var(--texto-2);text-align:center;margin-top:10px}
+
+.franja{background:var(--fondo-2);padding:44px 0}
+.datos{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.datos b{display:block;font-size:1.35rem;color:var(--naranja-osc)}
+.datos span{color:var(--texto-2);font-size:.95rem}
+.para{padding:48px 0}
+.para .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.para .card{border-top:3px solid var(--naranja);padding-top:14px}
+.para .card b{display:block;margin-bottom:4px}
+.para .card p{color:var(--texto-2);font-size:.95rem}
+footer{background:#2B2B2A;color:#cfcfcf;font-size:.8rem;padding:24px 0}
+footer a{color:#fff}
+
+/* gracias */
+#gracias{display:none;padding:60px 0 80px}
+#gracias .caja{max-width:620px;margin:0 auto;text-align:center}
+#gracias h1{font-size:2rem}
+#gracias p{color:var(--texto-2);font-size:1.05rem;margin-bottom:10px}
+#gracias .btn{max-width:360px;margin:26px auto 0}
+
+#modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);padding:16px;z-index:9;overflow:auto}
+#modal .tarjeta{max-width:680px;margin:40px auto;position:static;font-size:.85rem}
+#modal p{margin-bottom:10px}
+
+@media (max-width:860px){
+  html{font-size:17px}
+  .cols{grid-template-columns:1fr;gap:30px}
+  .tarjeta{position:static}
+  h1{font-size:1.85rem}
+  .datos,.para .grid{grid-template-columns:1fr;gap:16px}
+}
+@media (max-width:420px){ .dos{grid-template-columns:1fr} }
+</style>
+</head>
+<body>
+
+<header class="top"><div class="wrap"><div class="logo">sotelcom<small>tecnología que impulsa</small></div></div></header>
+
+<main id="oferta">
+<section class="hero">
+  <div class="wrap cols">
+    <div>
+      <span class="etq">Guía ejecutiva gratuita</span>
+      <h1>Los 7 puntos ciegos que pueden <em>detener su empresa</em></h1>
+      <p class="lead">Qué revisar en ciberseguridad, red, accesos, energía y edificio, explicado para quien dirige y no para quien instala. Se lee en 10 minutos.</p>
+      <h2>Lo que va a encontrar</h2>
+      <ul class="lista">
+        <li><b>Los 7 riesgos que casi nunca llegan a la gerencia</b><span>Por qué cada uno vive en un área distinta y nadie tiene la foto completa.</span></li>
+        <li><b>Qué le pasa al negocio si cada uno falla</b><span>En términos de operación, dinero y responsabilidad, sin lenguaje técnico.</span></li>
+        <li><b>Las 7 preguntas para hacerle a su equipo esta semana</b><span>Si la respuesta empieza con «creo que…», ahí hay un punto ciego.</span></li>
+        <li><b>Una lista de verificación de una página</b><span>Para revisar los 7 puntos con su equipo en una sola reunión.</span></li>
+      </ul>
+    </div>
+
+    <div class="tarjeta" id="formulario">
+      <div class="portada">
+        <div class="mini"><i>sotelcom</i>Los 7 puntos ciegos que pueden detener su empresa</div>
+        <p><b>Reciba la guía ahora</b>PDF de 8 páginas. Complete sus datos y descárguela de inmediato.</p>
+      </div>
+      <form id="f" onsubmit="enviar(event)">
+        <label for="nombre">Nombre y apellido</label>
+        <input id="nombre" name="nombre" required autocomplete="name">
+        <label for="cargo">Cargo</label>
+        <select id="cargo" name="cargo" required><option value="">Seleccione</option>
+          <option>Gerente general / CEO</option><option>Gerente financiero / administrativo</option>
+          <option>Director o jefe de TI</option><option>Gerente de operaciones / infraestructura</option>
+          <option>Administrador de edificio o copropiedad</option><option>Otro cargo</option></select>
+        <label for="empresa">Empresa</label>
+        <input id="empresa" name="empresa" required autocomplete="organization">
+        <div class="dos">
+          <div><label for="empleados">Colaboradores</label>
+            <select id="empleados" name="empleados" required><option value="">Seleccione</option>
+              <option>Menos de 50</option><option>50 a 200</option><option>201 a 500</option><option>Más de 500</option></select></div>
+          <div><label for="ciudad">Ciudad</label>
+            <select id="ciudad" name="ciudad" required><option value="">Seleccione</option>
+              <option>Cali</option><option>Medellín</option><option>Bogotá</option><option>Otra ciudad</option></select></div>
+        </div>
+        <label for="correo">Correo corporativo</label>
+        <input id="correo" name="correo" type="email" required autocomplete="email" oninput="revisarCorreo(this)">
+        <div class="aviso" id="avisoCorreo">Si puede, use el correo de la empresa.</div>
+        <label for="whatsapp">Celular / WhatsApp</label>
+        <input id="whatsapp" name="whatsapp" type="tel" required placeholder="300 123 4567" autocomplete="tel" pattern="[0-9+ ]{10,15}">
+        <div class="check"><input type="checkbox" id="hd" required>
+          <label for="hd">Autorizo el tratamiento de mis datos personales según la <a href="#" onclick="verPolitica();return false">política de tratamiento de datos</a> de Sotelcom.</label></div>
+        <button class="btn" type="submit">Descargar la guía gratis</button>
+        <p class="seguro">Sus datos no se comparten con terceros.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="franja">
+  <div class="wrap datos">
+    <div><b>Desde 2010</b><span>integrador tecnológico</span></div>
+    <div><b>+60 colaboradores</b><span>ingeniería, soporte y mantenimiento</span></div>
+    <div><b>Cali · Medellín · Bogotá</b><span>cobertura nacional</span></div>
+  </div>
+</section>
+
+<section class="para">
+  <div class="wrap">
+    <h2 style="font-size:1.4rem;margin-bottom:22px">Escrita para quien toma las decisiones</h2>
+    <div class="grid">
+      <div class="card"><b>Gerencia general y financiera</b><p>Entender qué riesgos tecnológicos pueden detener la operación y cuánto pesan para el negocio.</p></div>
+      <div class="card"><b>Dirección de TI</b><p>Tener una forma clara de llevar estos temas a la gerencia y priorizar la inversión.</p></div>
+      <div class="card"><b>Operaciones e infraestructura</b><p>Revisar que seguridad, energía y redes no paren las sedes, plantas o edificios.</p></div>
+    </div>
+    <a class="btn" href="#formulario" style="max-width:320px;margin-top:32px">Quiero la guía</a>
+  </div>
+</section>
+</main>
+
+<section id="gracias">
+  <div class="wrap caja">
+    <span class="etq">Listo</span>
+    <h1 id="gTitulo">Su guía está lista</h1>
+    <p>Descárguela aquí y reserve 10 minutos para leerla con calma. Al final encontrará la lista de verificación para revisar con su equipo.</p>
+    <a class="btn" id="descarga" href="Guia_7_puntos_ciegos_Sotelcom.pdf" download>Descargar la guía (PDF)</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">Sotelcom · Av. 5AN # 23DN-68, Ofic. 319, Cali · <a href="https://www.sotelcom.co">www.sotelcom.co</a> · <a href="#" onclick="verPolitica();return false">Tratamiento de datos personales</a></div>
+</footer>
+
+<div id="modal" onclick="if(event.target===this)this.style.display='none'">
+  <div class="tarjeta">
+    <h2>Autorización para el tratamiento de datos personales</h2>
+    <p>En cumplimiento de la Ley 1581 de 2012 y el Decreto 1377 de 2013, autorizo a SOTELCOM [razón social y NIT por completar] como responsable del tratamiento, para recolectar, almacenar y usar los datos que suministro en este formulario con las siguientes finalidades: (i) enviarme la guía solicitada, (ii) contactarme por llamada, WhatsApp o correo electrónico para ofrecerme orientación sobre los temas de la guía y (iii) enviarme información comercial sobre sus servicios.</p>
+    <p>Como titular tengo derecho a conocer, actualizar, rectificar y suprimir mis datos y a revocar esta autorización escribiendo a info@sotelcom.co.</p>
+    <p>Consulte la política completa de tratamiento de datos en [enlace a la política por publicar en www.sotelcom.co].</p>
+    <button class="btn" onclick="document.getElementById('modal').style.display='none'">Cerrar</button>
+  </div>
+</div>
+
+<script>
+/* ===== Configuración (completar antes de publicar) ===== */
+const CONFIG = {
+  // URL del webhook que recibe el lead en el CRM (GHL, Make, Zapier). Vacío = no envía.
+  webhook: "",
+  // Nombre de la oferta: viaja con el lead para saber de qué anuncio y regalo viene.
+  oferta: "Guía 7 puntos ciegos"
+};
+
+const $ = s => document.querySelector(s);
+function revisarCorreo(el){
+  $("#avisoCorreo").style.display = /@(gmail|hotmail|outlook|yahoo|live|icloud)\./i.test(el.value) ? "block" : "none";
+}
+async function enviar(e){
+  e.preventDefault();
+  const q = new URLSearchParams(location.search);
+  const lead = {...Object.fromEntries(new FormData(e.target)), oferta:CONFIG.oferta,
+    autorizacion_datos:true, utm_source:q.get("utm_source")||"directo",
+    utm_campaign:q.get("utm_campaign")||"", utm_content:q.get("utm_content")||"",
+    fecha:new Date().toISOString()};
+  if(CONFIG.webhook){
+    try{ await fetch(CONFIG.webhook,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(lead)}); }
+    catch(err){ console.warn("No se pudo enviar el lead", err); }
+  }
+  const nombre = (lead.nombre||"").trim().split(" ")[0];
+  if(nombre) $("#gTitulo").textContent = nombre + ", su guía está lista";
+  $("#oferta").style.display = "none";
+  $("#gracias").style.display = "block";
+  window.scrollTo(0,0);
+}
+function verPolitica(){ $("#modal").style.display="block"; }
+</script>
+</body>
+</html>
